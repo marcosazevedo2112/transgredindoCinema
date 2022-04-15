@@ -1,0 +1,394 @@
+header {
+  overflow: hidden;
+
+  img {
+    padding-top: 1em;
+
+    width: 100vw;
+    object-fit: contain;
+
+    &.desktop {
+      display: none;
+    }
+  }
+
+  .menu {
+    padding: 1.3em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .redes-sociais {
+      display: none;
+    }
+
+    .menu-itens {
+      display: none;
+    }
+
+    .hamb.mobile {
+      position: absolute;
+      right: 1em;
+
+      span {
+        margin: 0.4em 0;
+        display: block;
+        width: 30px;
+        height: 6px;
+        background-color: $black;
+      }
+
+      &.active {
+        span {
+          background-color: $white;
+        }
+      }
+    }
+  }
+
+  &.laranja {
+    background-color: $red;
+  }
+
+  .acessibilidade-menu-desktop {
+    display: none;
+  }
+  .menu-mobile{
+    overflow: hidden;
+    max-width: 100vh;
+    left: 100%;
+    position: fixed;
+    background-color: $black;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: 99;
+    transition: 0.5s ease-in-out;
+    transition-property: left;
+    .menu-top{
+      background-color: $red;
+      text-align: center;
+      img{
+        width: 30%;
+        padding-bottom: 2.5em;
+        padding-top: 2em;
+        clear: right;
+      }
+      h2{
+        letter-spacing: 3px;
+        font-size: 1.8rem;
+        padding-bottom: 0.5em;
+        margin: 0;
+      }
+    }
+    .menu-body{
+      text-align: center;
+      .menu-itens{
+        display: inline-block;
+        width: fit-content;
+        a {
+          display: block;
+          color: $white;
+          font-family: $title-font;
+          font-size: 1.7rem;
+          margin: 2em 1.2em;
+          transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+          transition-property: color;
+
+          &::after {
+            content: '';
+            position: relative;
+            bottom: -0.5em;
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: $white;
+            pointer-events: none;
+            transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            transition-property: background-color, bottom;
+          }
+  
+          &:hover,
+          &:active {
+            color: $red;
+  
+            &::after {
+              background-color: $red;
+              bottom: 0;
+            }
+          }
+        }
+      }
+      .redes-sociais {
+        display: block;
+
+        a {
+          display: inline-block;
+          width: 30px;
+          height: 25px;
+          margin: 1em 1em;
+          transform: scale(1.5);
+
+          svg {
+            transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            transition-property: fill;
+
+            path {
+              fill: $white;
+            }
+
+            &:hover,
+            &:active {
+              path {
+                fill: $red;
+              }
+            }
+          }
+        }
+      }
+      .acessibilidade-menu-mobile{
+        margin-top: 3em;
+        span {
+          font-family: $title-font;
+          color: $white;
+          margin: 0 1em;
+          border: 1px solid $white;
+          padding: 0.2em 0.4em;
+          transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+          transition-property: color;
+  
+          &:hover {
+            color: $red;
+            border-color: $red;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    #menu-close{
+      transform: scale(1.3);
+      position: absolute;
+      right: 0;
+      margin-right: 1em;
+      margin-top: 1em;
+      svg g line{
+        stroke: $white;
+        transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition-property: stroke;
+      }
+      &:hover, &:active{
+        svg g line{
+          stroke: $black;
+        }
+      }
+    }
+    &.active{
+      left: 0;
+    }
+  }
+}
+
+/*
+=====================================================
+Medium devices (desktops, 768px and up)
+Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
+=====================================================
+*/
+@include media-breakpoint-up(md) {
+  header {
+    .acessibilidade-menu-desktop {
+      padding-top: 1em;
+      font-size: 1rem;
+      display: flex;
+      justify-content: center;
+      user-select: none;
+
+      span {
+        font-family: $title-font;
+        margin: 0 1em;
+        transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition-property: color;
+
+        &:first-of-type {
+          margin-left: 1.5em;
+        }
+
+        &:hover {
+          color: $white;
+          cursor: pointer;
+        }
+      }
+    }
+
+    img {
+      padding: 0 2em;
+
+      &.desktop {
+        display: block;
+      }
+
+      &.mobile {
+        display: none;
+      }
+    }
+    .menu {
+      justify-content: space-between;
+
+      .redes-sociais {
+        display: block;
+
+        a {
+          display: inline-block;
+          width: 30px;
+          height: 25px;
+          margin: 0 0.5em;
+
+          svg {
+            transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            transition-property: fill;
+
+            path {
+              fill: $black;
+            }
+
+            &:hover,
+            &:active {
+              path {
+                fill: $white;
+              }
+            }
+          }
+        }
+      }
+
+      .menu-itens {
+        display: block;
+
+        a {
+          display: inline-block;
+          color: $black;
+          font-family: $title-font;
+          font-size: 1.3rem;
+          margin: 0 1.2em;
+          transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+          transition-property: color;
+
+          &::after {
+            content: '';
+            position: relative;
+            bottom: -0.5em;
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: $black;
+            pointer-events: none;
+            transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            transition-property: background-color, bottom;
+          }
+
+          &:hover,
+          &:active {
+            color: $white;
+
+            &::after {
+              background-color: $white;
+              bottom: 0;
+            }
+          }
+        }
+      }
+
+      .mobile {
+        display: none;
+      }
+
+      .desktop {
+        display: block;
+      }
+    }
+    .menu-mobile {
+      display: none;
+    }
+  }
+}
+
+/*
+=====================================================
+Large devices (desktops, 992px and up)
+Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
+=====================================================
+*/
+@include media-breakpoint-up(lg) {
+  header {
+    .acessibilidade-menu-desktop {
+      font-size: 1.1rem;
+    }
+
+    .menu {
+      padding-bottom: 1.5em;
+
+      .redes-sociais a {
+        transform: scale(1.1);
+      }
+
+      .menu-itens a {
+        margin: 0 1.5em;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+/*
+=====================================================
+Extra Large devices (desktops, 1200px and up)
+Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
+=====================================================
+*/
+@include media-breakpoint-up(xl) {
+  header {
+    img.desktop{
+      width: 80vw;
+      margin: 0 auto;
+    }
+    .acessibilidade-menu-desktop {
+      font-size: 1.2rem;
+    }
+
+    .menu {
+      padding-bottom: 1.7em;
+
+      .redes-sociais a {
+        margin: 0 0.3em;
+        transform: scale(1.1);
+      }
+
+      .menu-itens a {
+        margin: 0 1.5em;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+/*
+=====================================================
+Extra Extra Large devices (desktops, 1400px and up)
+Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
+=====================================================
+*/
+@include media-breakpoint-up(xxl) {
+  header {
+    .acessibilidade-menu-desktop {
+      font-size: 1.3rem;
+    }
+
+    .menu {
+      padding-bottom: 2em;
+
+      .menu-itens a {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}

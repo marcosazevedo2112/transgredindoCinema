@@ -1,0 +1,231 @@
+.homepage {
+  .sobre {
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    .text {
+      margin-top: 2em;
+
+      .link-wrapper {
+        margin: 2em 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .grey-box {
+      display: block;
+      margin: 0 auto;
+      background-color: $grey;
+      padding: 2em 1em;
+
+      p,
+      ul {
+        margin-bottom: 2.5em;
+      }
+
+      .default-btn {
+        display: block;
+        width: fit-content;
+        text-align: center;
+        margin: 0 auto;
+        &:hover, &:active{
+          background-color: $grey;
+        }
+      }
+    }
+  }
+
+  .equipe {
+    background-color: $green-carrousel;
+    background-image: url("../images/equipe/bg-mobile.png");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    overflow: hidden;
+
+    .container {
+      padding-bottom: 3em;
+
+      .desktop {
+        display: none;
+      }
+
+      .section-title {
+        padding-top: 1em;
+      }
+
+      .equipe-wrapper {
+        overflow-x: scroll;
+        width: 100vw;
+        margin-left: -1em;
+        display: flex;
+        flex-direction: row;
+
+        .equipe-item {
+          text-align: center;
+          margin-right: 1em;
+          margin-bottom: 2em;
+
+          h3 {
+            color: $white;
+            margin-top: 1.5em;
+          }
+
+          &:first-of-type {
+            margin-left: 1rem;
+          }
+        }
+      }
+
+      .link {
+        margin: 0 auto;
+        width: fit-content;
+        display: block;
+      }
+    }
+  }
+}
+
+/*
+=====================================================
+Medium devices (desktops, 768px and up)
+Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
+=====================================================
+*/
+@include media-breakpoint-up(md) {
+  .homepage {
+    .sobre {
+      padding-top: 1.5em;
+      padding-bottom: 1.5em;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+
+      .text {
+        padding-right: 3em;
+        width: 60%;
+
+        .link-wrapper {
+          display: block;
+        }
+      }
+
+      .grey-box {
+        width: 40%;
+
+        p,
+        ul {
+          margin-bottom: 1.5em;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        a.default-btn {
+          width: 100%;
+        }
+      }
+    }
+
+    .equipe {
+      overflow: hidden;
+
+      .container .section-title {
+        &.mobile {
+          display: none;
+        }
+
+        &.desktop {
+          display: flex;
+
+          span:first-of-type {
+            margin-left: 0;
+          }
+
+          span:last-of-type {
+            margin-right: 0;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+
+/*
+=====================================================
+Large devices (desktops, 992px and up)
+Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
+=====================================================
+*/
+@include media-breakpoint-up(lg) {
+  .homepage {
+    .sobre {
+      .grey-box {
+        h2 {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    .equipe .container {
+      max-width: calc(100vw - 4em);
+
+      .equipe-wrapper {
+        margin: 0;
+        overflow: visible;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 1em;
+        max-width: 100%;
+
+        .equipe-item {
+          margin-right: 0;
+
+          img {
+            width: 100%;
+            object-fit: cover;
+          }
+
+          &:first-of-type {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*
+=====================================================
+Extra Large devices (desktops, 1200px and up)
+Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
+=====================================================
+*/
+@include media-breakpoint-up(xl) {
+  .homepage {
+    .equipe .container {
+      max-width: calc(80vw - 4em);
+
+      .equipe-wrapper {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 1.5em;
+      }
+    }
+  }
+}
+
+
+/*
+=====================================================
+Extra Extra Large devices (desktops, 1400px and up)
+Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
+=====================================================
+*/
+@include media-breakpoint-up(xxl) {}

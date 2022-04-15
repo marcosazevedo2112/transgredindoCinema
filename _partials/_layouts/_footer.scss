@@ -1,0 +1,113 @@
+footer {
+  background-color: $black;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2em 0;
+
+  img {
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    object-fit: contain;
+
+    &.realizacao {
+      width: 60%;
+    }
+
+    &.desktop {
+      display: none;
+    }
+  }
+
+  .redes-sociais {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    display: block;
+
+    a {
+      width: 25px;
+      height: 30px;
+      margin: 0 0.5em;
+
+      svg path {
+        fill: $white;
+
+      }
+    }
+  }
+}
+
+/*
+=====================================================
+Medium devices (desktops, 768px and up)
+Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
+=====================================================
+*/
+@include media-breakpoint-up(md) {
+  footer {
+    display: block;
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: auto 1fr;
+
+      .redes-sociais {
+        grid-area: 2;
+        width: 100%;
+        height: fit-content;
+        margin: 0;
+        margin-top: 1em;
+        left: 0;
+        display: flex;
+        justify-content: start;
+        a{
+          display: inline-block;
+          transform: scale(0.9);
+          &:first-of-type{
+            margin-left: 0;
+          }
+        }
+      }
+
+      img {
+        &.mobile {
+          display: none;
+        }
+
+        &.desktop {
+          display: block;
+          grid-column: 2;
+          grid-row: 1;
+          width: 100%;
+        }
+        &.logo{
+          margin: 0;
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+/*
+=====================================================
+Extra Extra Large devices (desktops, 1400px and up)
+Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
+=====================================================
+*/
+@include media-breakpoint-up(xxl) {
+  footer .container{
+    .redes-sociais{
+      margin-top: 0;
+      a{
+        transform: scale(1.1);
+        margin: 0 0.6em;
+      }
+    }
+    img.logo{
+      width: 60%;
+    }
+  }
+}
