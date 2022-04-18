@@ -11156,7 +11156,6 @@ a {
   text-decoration: none;
   font-size: 1.2rem;
   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-  border: 1px solid #F26D6D;
   transition-property: color, background-color;
 }
 .default-btn:hover, .default-btn:active {
@@ -11312,6 +11311,9 @@ header .menu .hamb.mobile.active span {
 header.laranja {
   background-color: #F26D6D;
 }
+header.verde {
+  background-color: #358A47;
+}
 header .acessibilidade-menu-desktop {
   display: none;
 }
@@ -11402,7 +11404,7 @@ header .menu-mobile .menu-body .redes-sociais a svg:hover path, header .menu-mob
 header .menu-mobile .menu-body .acessibilidade-menu-mobile {
   margin-top: 3em;
 }
-header .menu-mobile .menu-body .acessibilidade-menu-mobile span {
+header .menu-mobile .menu-body .acessibilidade-menu-mobile a {
   font-family: "Anton", sans-serif;
   color: #FFFFFF;
   margin: 0 1em;
@@ -11411,7 +11413,7 @@ header .menu-mobile .menu-body .acessibilidade-menu-mobile span {
   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition-property: color;
 }
-header .menu-mobile .menu-body .acessibilidade-menu-mobile span:hover {
+header .menu-mobile .menu-body .acessibilidade-menu-mobile a:hover {
   color: #F26D6D;
   border-color: #F26D6D;
   cursor: pointer;
@@ -11449,16 +11451,18 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
     justify-content: center;
     user-select: none;
   }
-  header .acessibilidade-menu-desktop span {
+  header .acessibilidade-menu-desktop a {
+    color: #000000;
+    text-decoration: none;
     font-family: "Anton", sans-serif;
     margin: 0 1em;
     transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition-property: color;
   }
-  header .acessibilidade-menu-desktop span:first-of-type {
+  header .acessibilidade-menu-desktop a:first-of-type {
     margin-left: 1.5em;
   }
-  header .acessibilidade-menu-desktop span:hover {
+  header .acessibilidade-menu-desktop a:hover {
     color: #FFFFFF;
     cursor: pointer;
   }
@@ -11619,8 +11623,8 @@ footer img.desktop {
   display: none;
 }
 footer .redes-sociais {
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-top: 1em;
+  margin-bottom: 2em;
   display: block;
 }
 footer .redes-sociais a {
@@ -11656,6 +11660,7 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
     left: 0;
     display: flex;
     justify-content: start;
+    margin-top: 1em;
   }
   footer .container .redes-sociais a {
     display: inline-block;
@@ -11686,7 +11691,7 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 */
 @media (min-width: 1400px) {
   footer .container .redes-sociais {
-    margin-top: 0;
+    margin-top: 1em;
   }
   footer .container .redes-sociais a {
     transform: scale(1.1);
@@ -11697,7 +11702,7 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
   }
 }
 section.contato {
-  padding: 1em 0;
+  padding: 2em 0;
 }
 section.contato .desktop {
   display: none;
@@ -11763,6 +11768,9 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 =====================================================
 */
 @media (min-width: 768px) {
+  section.contato {
+    padding: 3em 0;
+  }
   section.contato .section-title.mobile {
     display: none;
   }
@@ -11855,15 +11863,13 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
   background-repeat: no-repeat;
   background-position: left bottom;
   overflow: hidden;
+  padding: 2em 0;
 }
 .homepage .equipe .container {
-  padding-bottom: 3em;
+  padding-bottom: 1em;
 }
 .homepage .equipe .container .desktop {
   display: none;
-}
-.homepage .equipe .container .section-title {
-  padding-top: 1em;
 }
 .homepage .equipe .container .equipe-wrapper {
   overflow-x: scroll;
@@ -11928,6 +11934,7 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
   }
   .homepage .equipe {
     overflow: hidden;
+    padding: 3em 0;
   }
   .homepage .equipe .container .section-title.mobile {
     display: none;

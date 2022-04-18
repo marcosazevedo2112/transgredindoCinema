@@ -22,8 +22,8 @@ footer {
   }
 
   .redes-sociais {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-top: 1em;
+    margin-bottom: 2em;
     display: block;
 
     a {
@@ -62,6 +62,7 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
         left: 0;
         display: flex;
         justify-content: start;
+        margin-top: 1em;
         a{
           display: inline-block;
           transform: scale(0.9);
@@ -100,7 +101,7 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 @include media-breakpoint-up(xxl) {
   footer .container{
     .redes-sociais{
-      margin-top: 0;
+      margin-top: 1em;
       a{
         transform: scale(1.1);
         margin: 0 0.6em;

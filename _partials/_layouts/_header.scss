@@ -49,6 +49,9 @@ header {
   &.laranja {
     background-color: $red;
   }
+  &.verde{
+    background-color: $green-header;
+  }
 
   .acessibilidade-menu-desktop {
     display: none;
@@ -148,7 +151,7 @@ header {
       }
       .acessibilidade-menu-mobile{
         margin-top: 3em;
-        span {
+        a {
           font-family: $title-font;
           color: $white;
           margin: 0 1em;
@@ -203,7 +206,9 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
       justify-content: center;
       user-select: none;
 
-      span {
+      a{
+        color: $black;
+        text-decoration: none;
         font-family: $title-font;
         margin: 0 1em;
         transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
