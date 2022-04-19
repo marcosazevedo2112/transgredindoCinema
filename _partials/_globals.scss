@@ -121,6 +121,23 @@ a {
       }
     }
   }
+  &.black{
+    color: $black;
+
+    &::after {
+      background-color: $black;
+    }
+
+    &:hover,
+    &:active {
+      color: $red;
+
+      &::after {
+        background-color: $red;
+        bottom: 0;
+      }
+    }
+  }
 }
 
 .container {

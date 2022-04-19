@@ -11235,6 +11235,19 @@ a {
   background-color: #000000;
   bottom: 0;
 }
+.link.black {
+  color: #000000;
+}
+.link.black::after {
+  background-color: #000000;
+}
+.link.black:hover, .link.black:active {
+  color: #F26D6D;
+}
+.link.black:hover::after, .link.black:active::after {
+  background-color: #F26D6D;
+  bottom: 0;
+}
 
 .container {
   padding: 0 1em;
@@ -12002,5 +12015,76 @@ Extra Extra Large devices (desktops, 1400px and up)
 Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 =====================================================
 */
+.sobre section.sobreCurso {
+  padding-top: 3em;
+  padding-bottom: 2em;
+}
+.sobre .modulos .section-title span {
+  margin-right: 0;
+}
+.sobre .modulos .modulos-list .modulo {
+  background-color: #E5E5E5;
+  padding: 2em;
+  padding-bottom: 4em;
+  margin-bottom: 2em;
+}
+.sobre .modulos .modulos-list .modulo h2, .sobre .modulos .modulos-list .modulo .h2 {
+  font-size: 2.3rem;
+  margin-bottom: 0.5em;
+}
+.sobre .modulos .modulos-list .modulo h4, .sobre .modulos .modulos-list .modulo .h4 {
+  margin-bottom: 1em;
+}
+.sobre .modulos .modulos-list .modulo .info {
+  margin-bottom: 1em;
+}
+.sobre .modulos .modulos-list .modulo .info span {
+  display: block;
+}
+.sobre .modulos .modulos-list .modulo a:not(.link) {
+  text-decoration: underline;
+  color: #000000;
+}
+.sobre .modulos .proposta {
+  display: none;
+}
+
+/*
+=====================================================
+Medium devices (desktops, 768px and up)
+Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
+=====================================================
+*/
+@media (min-width: 768px) {
+  .sobre .modulos {
+    text-align: center;
+  }
+  .sobre .modulos .modulos-list .modulo {
+    text-align: start;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .sobre .modulos .modulos-list .modulo h2, .sobre .modulos .modulos-list .modulo .h2 {
+    display: block;
+    width: 60%;
+    font-size: 2rem;
+    max-width: 5em;
+  }
+  .sobre .modulos .modulos-list .modulo .info span {
+    display: inline;
+    margin-left: 1em;
+  }
+  .sobre .modulos .proposta {
+    padding-top: 1em;
+    display: block;
+  }
+  .sobre .modulos .proposta a {
+    margin-left: 0.5em;
+    font-size: 1.6rem;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -1,3 +1,88 @@
-.sobre{
+.sobre {
+  section.sobreCurso {
+    padding-top: 3em;
+    padding-bottom: 2em;
+  }
+
+  .modulos {
+    .section-title {
+      span {
+        margin-right: 0;
+      }
+    }
+
+    .modulos-list {
+      .modulo {
+        background-color: $grey;
+        padding: 2em;
+        padding-bottom: 4em;
+        margin-bottom: 2em;
+
+        h2 {
+          font-size: 2.3rem;
+          margin-bottom: 0.5em;
+        }
+
+        h4 {
+          margin-bottom: 1em;
+        }
+
+        .info {
+          margin-bottom: 1em;
+
+          span {
+            display: block;
+          }
+        }
+
+        a:not(.link) {
+          text-decoration: underline;
+          color: $black;
+        }
+      }
+    }
+    .proposta{display: none;}
+  }
+}
+
+/*
+=====================================================
+Medium devices (desktops, 768px and up)
+Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
+=====================================================
+*/
+@include media-breakpoint-up(md) {
+  .sobre {
+    .modulos{
+      text-align: center;
+      .modulos-list .modulo {
+        text-align: start;
+        margin-bottom: 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
   
+        h2 {
+          display: block;
+          width: 60%;
+          font-size: 2rem;
+          max-width: 5em;
+        }
+  
+        .info span {
+          display: inline;
+          margin-left: 1em;
+        }
+      }
+      .proposta{
+        padding-top: 1em;
+        display: block;
+        a{
+          margin-left: 0.5em;
+          font-size: 1.6rem;
+        }
+      }
+    }
+    }
 }
