@@ -11265,6 +11265,10 @@ a {
     padding: 0;
   }
 
+  .extended-container {
+    max-width: calc(100vw - 4em);
+  }
+
   .section-title h2, .section-title .h2 {
     font-size: 2.2rem;
   }
@@ -11276,6 +11280,10 @@ a {
   .container {
     max-width: 65%;
     padding: 0;
+  }
+
+  .extended-container {
+    max-width: calc(80vw - 4em);
   }
 }
 @media (min-width: 1400px) {
@@ -11972,9 +11980,6 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
   .homepage .sobre .grey-box h2, .homepage .sobre .grey-box .h2 {
     font-size: 1.6rem;
   }
-  .homepage .equipe .container {
-    max-width: calc(100vw - 4em);
-  }
   .homepage .equipe .container .equipe-wrapper {
     margin: 0;
     overflow: visible;
@@ -12001,9 +12006,6 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 =====================================================
 */
 @media (min-width: 1200px) {
-  .homepage .equipe .container {
-    max-width: calc(80vw - 4em);
-  }
   .homepage .equipe .container .equipe-wrapper {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 1.5em;
@@ -12012,6 +12014,89 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 /*
 =====================================================
 Extra Extra Large devices (desktops, 1400px and up)
+Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
+=====================================================
+*/
+.equipepage .ministrantes {
+  padding-top: 2em;
+}
+.equipepage .ministrantes .section-title {
+  margin-bottom: 2em;
+}
+.equipepage .ministrantes .section-title span {
+  margin-right: 0;
+}
+.equipepage .ministrantes .pessoas-list .pessoa {
+  margin-bottom: 4em;
+}
+.equipepage .ministrantes .pessoas-list .pessoa:last-of-type {
+  margin-bottom: 0;
+}
+.equipepage .ministrantes .pessoas-list .pessoa img {
+  width: 100%;
+  height: calc(100% - 2em);
+  object-fit: cover;
+  margin-bottom: 0.5em;
+}
+.equipepage .ministrantes .pessoas-list .pessoa h2, .equipepage .ministrantes .pessoas-list .pessoa .h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+.equipepage .ministrantes .pessoas-list .pessoa h4, .equipepage .ministrantes .pessoas-list .pessoa .h4 {
+  color: #F26D6D;
+  margin-bottom: 1em;
+}
+.equipepage .ministrantes .pessoas-list .pessoa p {
+  text-align: justify;
+}
+.equipepage .ministrantes .pessoas-list .pessoa p a {
+  text-decoration: underline;
+  color: #000000;
+  font-weight: bold;
+}
+.equipepage .ministrantes .proposta {
+  display: none;
+}
+
+/*
+=====================================================
+Medium devices (desktops, 768px and up)
+Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
+=====================================================
+*/
+@media (min-width: 768px) {
+  .equipepage .ministrantes .pessoas-list .pessoa {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  .equipepage .ministrantes .pessoas-list .pessoa img {
+    padding-right: 1.5em;
+  }
+  .equipepage .ministrantes .pessoas-list .pessoa h2, .equipepage .ministrantes .pessoas-list .pessoa .h2 {
+    display: inline-block;
+  }
+  .equipepage .ministrantes .pessoas-list .pessoa h4, .equipepage .ministrantes .pessoas-list .pessoa .h4 {
+    margin-left: 1em;
+    display: inline-block;
+  }
+  .equipepage .ministrantes .proposta {
+    padding-top: 2em;
+    padding-bottom: 1.5em;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .equipepage .ministrantes .proposta a {
+    margin-left: 0.5em;
+    font-size: 1.6rem;
+  }
+}
+/*
+=====================================================
+Large devices (desktops, 992px and up)
 Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 =====================================================
 */

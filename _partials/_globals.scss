@@ -156,6 +156,9 @@ a {
     max-width: 75%;
     padding: 0;
   }
+  .extended-container{
+    max-width: calc(100vw - 4em);
+  }
 
   .section-title {
     h2 {
@@ -172,6 +175,9 @@ a {
   .container {
     max-width: 65%;
     padding: 0;
+  }
+  .extended-container{
+    max-width: calc(80vw - 4em);
   }
 }
 

@@ -171,8 +171,6 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
     }
 
     .equipe .container {
-      max-width: calc(100vw - 4em);
-
       .equipe-wrapper {
         margin: 0;
         overflow: visible;
@@ -208,8 +206,6 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 @include media-breakpoint-up(xl) {
   .homepage {
     .equipe .container {
-      max-width: calc(80vw - 4em);
-
       .equipe-wrapper {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         column-gap: 1.5em;
